@@ -1,0 +1,73 @@
+v1.1:
+- working commands: seek, help, ping, bearer
+- logs saved automatically in a discord.log file
+
+v1.2:
+- reworked into the discord.ext.commands.Bot from discord.Client
+- "help" can be DM-ed
+- owner command added: "save_log"
+
+v1.3:
+- owner command added: "server_info"
+- commands added: "when", "PraiseTheSun"
+- reworked "seek" command: handling possible errors, also now only finds users after 2 hours from joining
+- added an emergency log - after being rate-limited
+
+v1.4:
+- more professional comments
+- "on_ready" is now in a listener, not an event (looking back, it's still overwriting)
+- reworked "seek" - added "-all", "-roles" and <name> parameters
+- better-looking help
+- cleanup in the code
+- changed the command handling the rate-limit
+
+v1.5:
+- added the rate-limit flag - to enable a notification when a rate-limit happens
+- fixed the "on_ready" listener
+- new aliases for the "PraiseTheSun" command
+- minor fixes
+
+v2.0:
+- owner command added: "rate_limit"
+- command added: "changelog"
+- added listeners adding and removing permissions to write on muted chat on DS server, when someone is muted/unmuted
+- global check added - only staff will be able to use the bot
+- fixed the listener checking for rate_limit - ignores the message setting the rate_limit flag
+- fixed "seek" - ignores Muted
+- complete reformatting of the code - dividing into files containing "cogs"
+
+v2.1:
+- "seek" reworked to enable more servers being added
+- commands added: "hello", "hello there" and "general kenobi" (can even reply!)
+- comments' changes
+- minor fixes
+
+v2.2:
+- new set of commands added: "add" making it possible for staff to add more roles
+- command added: "roles" - shows roles tracked currently by Wraith for the server
+- help command made more readable
+- reactions to errors
+
+v2.3
+- now everyone can use the bot! (except the moderation commands)
+- moderation commands can no longer be used in DMs, consequently "seek" no longer takes the server's name as an argument
+- argument dm removed from "help"
+- publicly-available commands now have a cooldown
+- minor fixes
+
+v2.4
+- command added: "gif" - use one of the gif names to send a cool gif!
+- gif command is the first to be both a slash- and a regular command. The other commands will probably be added as slash commands too, later
+- minor fixes
+
+v2.5
+- command added: "colour_fix" - check who doesn't have a colour role
+- new gifs!
+- now unparsed commands will try to invoke the gif command
+
+v2.6
+Current version:
+- command added: "generate_kicks" - lets the mods generate kick commands from the seek response
+- new reaction to DS2 messages - so people remember to put their soul memory
+- new reactions to messages regarding getting help - platforms of the user based on roles
+- code optimization (bet it won't change anything visibly though)
